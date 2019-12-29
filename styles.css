@@ -4,11 +4,11 @@ html {
 }
 
 .title_panel {
-    margin: 1rem 0;
+    margin: 16px 0px;
 }
 
 .intro_panel {
-    margin: 1rem 10rem;
+    margin: 16px 160px;
 }
 
 .main_title {
@@ -17,8 +17,8 @@ html {
 }
 
 .sub_title {
-    font-size: 12rem;
-    line-height: 4rem;
+    font-size: 12px;
+    line-height: 4px;
     font-style: italic;
 }
 
