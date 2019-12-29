@@ -1,26 +1,24 @@
 html {
-    font-size: 100%;
+    font-size: 16px;
     width: 1280px;
 }
 
 .title_panel {
-    width: 100%;
     margin: 1rem 0;
 }
 
 .intro_panel {
-    width: 100%;
     margin: 1rem 10rem;
 }
 
 .main_title {
-    font-size: 2rem;
-    line-height: 1rem;
+    font-size: 32px;
+    line-height: 16px;
 }
 
 .sub_title {
-    font-size: 0.75rem;
-    line-height: 0.25rem;
+    font-size: 12rem;
+    line-height: 4rem;
     font-style: italic;
 }
 
