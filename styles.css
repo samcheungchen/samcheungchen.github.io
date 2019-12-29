@@ -12,13 +12,11 @@ html {
 }
 
 .main_title {
-    font-size: 32px;
-    line-height: 16px;
+    font-size: 16px;
 }
 
 .sub_title {
-    font-size: 12px;
-    line-height: 4px;
+    font-size: 8px;
     font-style: italic;
 }
 
