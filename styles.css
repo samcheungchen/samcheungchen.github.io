@@ -12,6 +12,7 @@ body {
 .panel {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .title {
@@ -205,31 +206,53 @@ body {
 @media only screen and (max-width: 900px){
     .flip-card {        
         padding-bottom: 5vh;
+        display: block;
+        overflow: hidden;
     }
 
     .flip-card-front{
         height: 20vh;
         background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .card-label a {
         color:white;
         font-size: 2rem;
-        padding: 2.5rem 0 2.5rem 0;
-        text-align: center;
-        vertical-align: middle;
+    }
+
+    .card-layout {
+        border-radius: 5px;
+    }
+
+    .card-layout:hover {
+        border: 5px solid white;        
     }
 
     .card-background1{
-        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 0, 0, 0.25)), url('card_logo1.jpg');  
+        background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.65), rgba(255, 0, 0, 0.1)), url('banner3.jpg');  
+    }
+
+    .card-background1:hover{
+        background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.35)), url('banner3.jpg');
     }
     
     .card-background2{
-        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(0, 255, 0, 0.25)), url('card_logo2.jpg');  
+        background-image: linear-gradient(to bottom right, rgba(6, 75, 6, 0.75), rgba(17, 51, 17, 0.1)), url('banner1.jpg');  
+    }
+
+    .card-background2:hover{
+        background-image: linear-gradient(to bottom right, rgba(6, 75, 6, 0.9), rgba(17, 51, 17, 0.35)), url('banner1.jpg');
     }
     
     .card-background3{
-        background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(0, 0, 255, 0.25)), url('card_logo3.jpg');  
+        background-image: linear-gradient(to bottom right, rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0.1)), url('banner2.jpg');  
+    }
+
+    .card-background3:hover{
+        background-image: linear-gradient(to bottom right, rgba(0, 0, 255, 0.9), rgba(61, 61, 155, 0.35)), url('banner2.jpg');  
     }
 
     .flip-card-back {
@@ -271,85 +294,4 @@ body {
 
 .menu a:hover {
     color:greenyellow;
-}
-
-/* Resume page CSS code */
-
-.resume-body {
-    margin: 0;
-    padding: 0;
-    background: #2d3436;
-}
-
-.middle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.btn {
-    position: relative; 
-    display: block;
-    color: white;
-    font-size: 14px;
-    font-family: "montserrat";
-    text-decoration: none;
-    margin: 30px 0;
-    border: 2px solid #ff7675;
-    padding: 14px 60px;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: 1s all ease;
-}
-
-.btn::before{
-    background: #ff7675;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: all .6s ease;
-}
-
-.btn1::before {
-    width: 0;
-    height: 100%;
-}
-
-.btn1:hover::before {
-    width: 100%;
-}
-
-.btn2::before {
-    width: 100%;
-    height: 0;
-}
-
-.btn2:hover::before {
-    height: 100%;
-}
-
-.btn3::before {
-    width: 100%;
-    height: 0;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.btn3:hover::before {
-    height: 380%;
-}
-
-.btn4::before {
-    width: 100%;
-    height: 0;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.btn4:hover::before {
-    height: 380%;
 }
