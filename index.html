@@ -8,12 +8,28 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="css/icon-font.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css" media="all">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Sam Chen | Webpage Design Space</title>
     </head>
     <body>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi_toggle">
+            <label for="navi_toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <div class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">About me</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Projects</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Experiences</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Resources</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -23,7 +39,7 @@
                     <span class="heading-primary--main">Sam Chen</span>
                     <span class="heading-primary--sub">My Portfolio and Test Space</span>
                 </h1>
-                <a href="#" class="btn btn--white btn--animated">See my projects</a>
+                <a href="#section-projects" class="btn btn--white btn--animated">See my projects</a>
             </div>
         </header>   
         <main>
@@ -47,9 +63,21 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                                src="img/nat-1-large.jpg"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                alt="Photo 1" 
+                                class="composition__photo composition__photo--p1">
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                                src="img/nat-2-large.jpg"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                alt="Photo 2" 
+                                class="composition__photo composition__photo--p2">
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                                src="img/nat-3-large.jpg"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                alt="Photo 3" 
+                                class="composition__photo composition__photo--p3">
                         </div>                        
                     </div>
                 </div>             
@@ -86,7 +114,7 @@
                     </div>
                 </div>                
             </section>
-            <section class="section-projects">
+            <section class="section-projects" id="section-projects">
                 <div class="u-center-text u-margin-bottom-large">
                     <h2 class="heading-secondary">
                         My side projects
@@ -120,7 +148,7 @@
                                         <p class="card__status-label">Status</p>
                                         <p class="card__status-value">Ongoing</p>
                                     </div>
-                                    <a href="" class="btn btn--white">Learn more</a>
+                                    <a href="#popup" class="btn btn--white">Learn more</a>
                                 </div>
                             </div>                            
                         </div>                        
@@ -152,7 +180,7 @@
                                         <p class="card__status-label">Status</p>
                                         <p class="card__status-value">Ongoing</p>
                                     </div>
-                                    <a href="" class="btn btn--white">Learn more</a>
+                                    <a href="#popup" class="btn btn--white">Learn more</a>
                                 </div>
                             </div>                            
                         </div>             
@@ -184,7 +212,7 @@
                                         <p class="card__status-label">Status</p>
                                         <p class="card__status-value">Completed</p>
                                     </div>
-                                    <a href="" class="btn btn--white">Learn more</a>
+                                    <a href="#popup" class="btn btn--white">Learn more</a>
                                 </div>
                             </div>                            
                         </div>
@@ -218,7 +246,7 @@
                         <div class="experience__text">
                             <h3 class="heading-tertiary u-margin-bottom-small">
                                 University of Connecticut - Storrs, CT
-                            </h3>overflow: hidden;
+                            </h3>
                             <ul>
                                 <li>- Undergraduate student from August 2010 to May 2014</li>
                                 <li>- Bachelor Degree in Computer Science and Engineering</li>
@@ -318,8 +346,53 @@
                 </div>
             </section>
         </main> 
-        <footer>
-
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                        src="img/logo-green-small-2x.png"
+                        media="(max-width: 37.5em)">                    
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                        src="img/logo-green-2x.png"
+                        alt="Full Logo" 
+                        class="footer__logo">                    
+                </picture>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">About Me</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Portfolio</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Report a bug</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Created by Sam Chen. The webpage was designed by <a href="#" class="footer__link">Jonas Schmedtmann</a>, the instructor of <a href="#" class="footer__link">Advanced CSS and SASS</a> online course on <a href="#" class="footer__link">Udemy</a>. All design credit goes to the original designer. This website is an educational experience on modern webpage design and implementation.
+                    </p>
+                </div>
+            </div>
         </footer>
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Photo 1" class="popup__image">
+                    <img src="img/nat-9.jpg" alt="Photo 2" class="popup__image">
+                </div>
+                <div class="popup__right">
+                    <a href="#section_projects" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Point of Sales</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">History of project</h3>
+                    <p class="popup__text">
+                        My family works in retail industry, running a small grocery store. So a reliable, easy-to-use point of sales system is crucial in every day operations. The user interface should be user friendly and the functionalities must include various reporting features: for identifying business trends, tax purposes, and more. Some additional features I would like to add to this project include inventory control and low inventory warning, to make this application a complete tool for any retailers. Please click the Proceed button to naviagate to the Project page.
+                    </p>
+                    <a href="#" class="btn btn--green">Proceed</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
